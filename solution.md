@@ -1,63 +1,33 @@
-```zsh
-# Clone the initial repository
-git clone git@github.com:eerwitt/command-line-mystery.git
-cd command-line-mystery
+ls
 
-# Check the status to see if anything is already marked as new (shouldn't be)
-git status
+List the currently files or directories in the current directory that you are in
 
-# Edit my solution file
-subl solution.md
+cd
+Changes directories 
 
-# Commit initial solution
-git add solution.md
-git commit -a
+cat
+displays the content of a file in your terminal window
 
-# Start reading the instructions
-less instructions
+grep
+Used to find a string within 
 
-# Check for clues in the mystery
-cd mystery
-grep CLUE ./crimescene
+grep -r "string" *
+searches for a string in the every file in the current directory
 
-# Search for person with the Latte
-grep Annabel ./people
+head
+Uses to read the first 10 lines in a file by default put them in the terminal
 
-# Knock on her door
-less streets/Mattapan_Street
-# Goto line in file using less: http://stackoverflow.com/questions/8586648/going-to-a-specific-line-number-using-less-in-unix
-# in less type 173g
-# Try different interviews
-less interviews/interview-47246024
+head -n number
+Will read the first "number" lines in a file and put them in the terminal
 
-less interviews/interview-699607
+tail
+Will read the last 10 lines in a file by default and put them in the terminal
 
-# Checking for vehicle
-less vehicles
-# Search in less for vehicles starting with L337 and ending in 9
-# in less /L337..9
-# Check which are over 6'
-# Katie Park
-# Mike Bostock
-# John Keefe
-# Erika Owens
-# Matt Waite
-# Brian Boyer
-# Al Shaw
-# Miranda Mulligan
-# Joe Germuska
-# Jeremy Bowers
-# Jacqui Maher
+tail -n number
+Will read the last "number" lines in a file and put them in the terminal
 
-# Check which is male/female and get their names
-egrep '((Katie Park)|(Mike Bostock)|(John Keefe)|(Erika Owens)|(Matt Waite)|(Brian Boyer)|(Al Shaw)|(Miranda Mulligan)|(Joe Germuska)|(Jeremy Bowers)|(Jacqui Maher))' ./people | grep '\tM\t' | cut -f1
+Command 1|Command 2
+From my understanding, pipe or "|" takes Command 1 and inputs into Command 2, then the command does the output
 
-# Limit down by membership
-egrep -R '((Joe Germuska)|(Brian Boyer)|(Mike Bostock)|(Jeremy Bowers)|(John Keefe)|(Al Shaw)|(Matt Waite))' ./memberships
-
-# (Jeremy Bowers)|(Brian Boyer)|(Mike Bostock)|(Matt Waite)
-# Not MB, wrong car color
-# Not MW, wrong car manufacturer
-# Not BB, wrong car manufacturer
-# JB, it is JB
-```
+Criminal
+Jeremy Bowers
