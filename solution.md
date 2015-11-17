@@ -14,6 +14,9 @@ Used to find a string within
 grep -r "string" *
 searches for a string in the every file in the current directory
 
+grep -A number "string"
+prints out "number" lines after you find the string you're looking for
+
 head
 Uses to read the first 10 lines in a file by default put them in the terminal
 
